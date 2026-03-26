@@ -4,7 +4,12 @@ spring:
       enabled: true
 
   mongodb:
-    uri: mongodb://root:0Tv81SaaAMJNQCPkkMORKPFFvKOUMz5z0BsOPNYnp__Plqyy@2a89b6fc-6a2a-4bc6-80fb-c1e35cb38718.asia-southeast1.firestore.goog:443/db-sellora?loadBalanced=true&tls=true&authMechanism=SCRAM-SHA-256&retryWrites=false
+    host: localhost
+    port: 13500
+    database: eca
+    username: root
+    password: mongodb
+    authentication-database: admin
 
 server:
   port: 0
