@@ -25,20 +25,13 @@ servlet:
     max-request-size: 10MB
 
 server:
-  port: 8000
+  port: 0
   forward-headers-strategy: framework
 
 eureka:
   instance:
-    hostname: localhost
-    prefer-ip-address: false
-    instance-id: ${spring.application.name}:${server.port}
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-      defaultZone: http://localhost:9001/eureka/
+    instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
 
 app:
   storage:
-    path: ${user.home}/.ijse/eca/students
+    path: ${user.home}/.ijse/eca/user
